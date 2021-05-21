@@ -15,7 +15,7 @@ class HashTable {
     set(key, value) {
       let address = this._hash(key);
       if (!this.data[address]) {
-        this.data[address] = [];
+        this.data[address] = []; //try to modify array to linked list
       }
       this.data[address].push([key, value]);
       return this.data;
